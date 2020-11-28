@@ -1,3 +1,4 @@
+alert('test')
 function fetch() {
   var main = new XMLHttpRequest();
   main.onreadystatechange = function() {

@@ -13,7 +13,7 @@ var main = new XMLHttpRequest();
 	} else if (this.readyState == 4 && this.status == 200) {
 	  var data = JSON.parse(this.responseText)
 	  for(i=0;i<data.length;i++){
-		  array.push(``);
+		  array.push(`<div class="bg-dark card"><div class="card-body text-center"><h3>${data[i].replace("https://","")}</h3> <div class=btn-group><a class="btn btn-light" href="${data[i]}">Download</a> <button class="btn btn-light">Copy</button></div></div></div>`);
 	  }
 	  document.getElementById("output").innerHTML = final;
 

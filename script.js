@@ -11,6 +11,9 @@ var main = new XMLHttpRequest();
 	  document.getElementById("output").innerHTML = '<p>processing request</p>' + loader;
 	} else if (this.readyState == 4 && this.status == 200) {
 	  var data = JSON.parse(this.responseText)
+	  for(i=0;i<data.length;i++){
+		  alert(data.length);
+	  }
 	var final = data;
 	  document.getElementById("output").innerHTML = final;
 

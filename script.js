@@ -14,7 +14,6 @@ var main = new XMLHttpRequest();
 	  for(i=0;i<data.length;i++){
 		  alert(data.length);
 	  }
-	var final = data;
 	  document.getElementById("output").innerHTML = final;
 
 	} else {

@@ -12,7 +12,7 @@ var main = new XMLHttpRequest();
 	} else if (this.readyState == 4 && this.status == 200) {
 	  var data = JSON.parse(this.responseText)
 	  for(i=0;i<data.length;i++){
-		  alert(data.length);
+		  alert(data[i]);
 	  }
 	  document.getElementById("output").innerHTML = final;
 

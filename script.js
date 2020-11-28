@@ -15,7 +15,7 @@ var main = new XMLHttpRequest();
 	  for(i=0;i<data.length;i++){
 		  array.push(`<div class="bg-dark card"><div class="card-body text-center"><h3>${data[i].replace("https://","")}</h3> <div class=btn-group><a class="btn btn-light" href="${data[i]}">Download</a> <button class="btn btn-light">Copy</button></div></div></div>`);
 	  }
-	  document.getElementById("output").innerHTML = final;
+	  document.getElementById("output").innerHTML = array.join("");
 
 	} else {
 	  document.getElementById("output").innerHTML = '<p class="warning">Something went wrong</p>' + loader;

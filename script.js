@@ -11,14 +11,14 @@ var main = new XMLHttpRequest();
 	  document.getElementById("output").innerHTML = '<p>processing request</p>' + loader;
 	} else if (this.readyState == 4 && this.status == 200) {
 	  var data = JSON.parse(this.responseText)
-	alert(data[1])
+	var final = data;
 	  document.getElementById("output").innerHTML = final;
 
 	} else {
 	  document.getElementById("output").innerHTML = '<p class="warning">Something went wrong</p>' + loader;
 	}
   };
-  main.open("GET", "", true);
+  main.open("GET", "https://raw.githubusercontent.com/Galaxy-Coding/defly.io-skins/main/all-skins.json", true);
   main.send();
 
 var final;

@@ -1,3 +1,4 @@
+alert(ClipboardJS.isSupported());
 var arrayz = [];
 var main = new XMLHttpRequest();
   main.onreadystatechange = function() {

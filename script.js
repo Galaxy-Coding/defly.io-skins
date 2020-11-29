@@ -1,3 +1,4 @@
+var data = "";
 var arrayz = [];
 var main = new XMLHttpRequest();
   main.onreadystatechange = function() {

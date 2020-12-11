@@ -12,7 +12,7 @@ var main = new XMLHttpRequest();
 	} else if (this.readyState == 3) {
 	  document.getElementById("output").innerHTML = '<p>processing request</p>' + loader;
 	} else if (this.readyState == 4 && this.status == 200) {
-	  var data = new Set (JSON.parse(this.responseText));
+	  var data = JSON.parse(this.responseText);
 	 for(i=0;i<data.length;i++){
       arrayz.push(`<div class="bg-dark card"><div class="card-body m-6 shadow-sm text-center"><h3>${data[i].substring(data[i].lastIndexOf("/") + 1).replaceAll(".txt","").replaceAll("_"," ")}</h3> <div class=btn-group><a class="btn btn-light" href="${data[i]}" download>Download</a> <button data-clipboard-text="${data[i]}" class="btn btn-light">Copy Link</button></div></div></div>`);
 	  }
